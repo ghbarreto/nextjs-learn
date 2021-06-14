@@ -4,6 +4,8 @@ function ClientsPage() {
   const clients = [
     { id: 'gabe', name: 'gabriel' },
     { id: 'thatha', name: 'thais' },
+    { id: 'thatha', name: 'thais' },
+    { id: 'thatha', name: 'thais' },
   ];
 
   return (
