@@ -1,5 +1,14 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import { _connection } from '../../lib/config/db';
 
-export function handler(req, res) {
-  res.status(200).json({ name: 'John Doe' });
+export default async function handler(req, res) {
+  if (req.method === 'GET') {
+    const response = await _connection
+      .collection('movies')
+      .findOne({ title: 'Blacksmith Scene' });
+
+    res.json(response);
+  } else {
+    return;
+  }
 }
