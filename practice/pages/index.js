@@ -14,7 +14,9 @@ export default function Home({ value }) {
         </Head>
         {value.plot}
       </div>
-      <DisplayValues>{value.fullplot}</DisplayValues>
+      {console.log(value)}
+      <DisplayValues>{value.title}</DisplayValues>
+      <DisplayValues>{value.img}</DisplayValues>
     </React.Fragment>
   );
 }

@@ -5,7 +5,7 @@ export default async function handler(req, res) {
   if (req.method === 'GET') {
     const response = await _connection
       .collection('movies')
-      .findOne({ title: 'Blacksmith Scene' });
+      .findOne({ year: 1893 });
 
     res.json(response);
   } else {
